@@ -2,25 +2,25 @@
 
 > Snapshot testing, but for actions.
 
-A starter template for SwiftUI UI interaction testing. Clone it, drop it into your project, and customize it to test your views. Tests define views as codable structs, user interactions are captured as text logs, and tests verify the logs match saved snapshots.
+A starter template for SwiftUI UI interaction testing. Clone it, drop it into your project, and customize it to test your views. Tests define views as codable structs, user interactions are captured as text snapshots, and tests verify the snapshots match saved ones.
 
 ## Snapshot Testing
 
 This is **interaction snapshot testing**:
 
-1. First run: Test executes, interactions are logged to a file (snapshot is created)
-2. Test is skipped with "generating new log"
-3. Subsequent runs: New log is compared against the saved snapshot
-4. Test fails if logs don't match (behavior changed)
+1. First run: Test executes, interactions are logged to a text file (snapshot is created)
+2. Test is skipped with "generating new snapshot"
+3. Subsequent runs: New snapshot is compared against the saved one
+4. Test fails if snapshots don't match (behavior changed)
 
-Similar to Jest snapshots or Swift Snapshot Testing, but for **user interaction logs** instead of visual/data output.
+Similar to Jest snapshots or Swift Snapshot Testing, but for **user interactions** instead of visual/data output.
 
 ## How It Works
 
 1. Tests define `TestView` with a `ViewBody` (e.g., `.button(text: "demo")`)
 2. App launches with the view passed via environment variable
-3. UI interactions (taps, etc.) write to log files
-4. Tests compare generated logs against saved snapshots
+3. UI interactions (taps, swipes, state changes, lifecycle events like `onAppear`) write to text snapshot files
+4. On teardown, tests compare generated snapshots against saved ones
 
 ## Usage
 
@@ -41,7 +41,7 @@ To test your own package, uncomment the `packages` section in `project.yml`.
 - `SharedCode/` - `TestView` struct and extensions (shared between app and tests)
 - `AppCode/` - SwiftUI app that renders test views
 - `TestCode/` - XCTest UI tests
-- `Snapshots/` - Interaction log snapshots for verification
+- `Snapshots/` - Text snapshots for verification
 - `project.yml` - XcodeGen project definition
 
 ## Extending
@@ -62,7 +62,12 @@ case let .yourType(param):
     YourView(param) {
         try! logFile.append("action")
     }
+    .onAppear {
+        try! logFile.append("appeared")
+    }
 ```
+
+Capture any interaction: taps, swipes, state changes, lifecycle events, text input, etc.
 
 Update snapshots: delete the file in `Snapshots/`, rerun test.
 
