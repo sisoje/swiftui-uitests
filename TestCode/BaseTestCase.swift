@@ -5,7 +5,7 @@ class BaseTestCase: XCTestCase {
     var savedLog: String?
 
     var logFile: URL {
-        .logFilesDirectory.appendingPathComponent(name).appendingPathExtension("log")
+        .logFilesDirectory.appendingPathComponent(name).appendingPathExtension("txt")
     }
 
     override open func setUpWithError() throws {
