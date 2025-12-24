@@ -1,0 +1,30 @@
+name: TestApp
+options:
+  bundleIdPrefix: com.testapp
+
+settings:
+  base:
+    GENERATE_INFOPLIST_FILE: YES
+
+# packages:
+#   MyPackage:
+#     path: ../
+
+targets:
+  TestApp:
+    type: application
+    platform: iOS
+    sources: [AppCode, SharedCode]
+    # dependencies:
+    #   - package: MyPackage
+    #     product: MyProduct
+
+  UITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [TestCode, SharedCode]
+    settings:
+      TEST_TARGET_NAME: TestApp
+    dependencies:
+      - target: TestApp
+ 
