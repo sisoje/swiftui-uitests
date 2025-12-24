@@ -4,7 +4,7 @@
 
 A starter template for SwiftUI UI interaction testing. Clone it, drop it into your project, and customize it to test your views. Tests define views as codable structs, user interactions are captured as text snapshots, and tests verify the snapshots match saved ones.
 
-## Snapshot Testing
+## How It Works
 
 This is **interaction snapshot testing**:
 
@@ -15,7 +15,7 @@ This is **interaction snapshot testing**:
 
 Similar to Jest snapshots or Swift Snapshot Testing, but for **user interactions** instead of visual/data output.
 
-## How It Works
+**Implementation:**
 
 1. Tests define `TestView` with a `ViewBody` (e.g., `.button(text: "demo")`)
 2. App launches with the view passed via environment variable
