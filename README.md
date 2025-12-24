@@ -2,7 +2,7 @@
 
 > Snapshot testing, but for actions.
 
-A snapshot testing framework for SwiftUI UI interactions. Tests define views as codable structs, user interactions are captured as text logs, and tests verify the logs match saved snapshots.
+A starter template for SwiftUI UI interaction testing. Clone it, drop it into your project, and customize it to test your views. Tests define views as codable structs, user interactions are captured as text logs, and tests verify the logs match saved snapshots.
 
 ## Snapshot Testing
 
@@ -24,11 +24,15 @@ Similar to Jest snapshots or Swift Snapshot Testing, but for **user interaction 
 
 ## Usage
 
+1. Clone or download this repository
+2. Customize `TestView` and test cases for your app
+3. Run tests:
+
 ```bash
 sh run.sh
 ```
 
-Generates Xcode project with XcodeGen, picks first available iPhone simulator, and runs UI tests.
+The script generates the Xcode project with XcodeGen, picks the first available iPhone simulator, and runs UI tests.
 
 ## Structure
 
