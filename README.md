@@ -88,3 +88,26 @@ Update snapshots: delete the file in `Snapshots/`, rerun test.
 - macOS
 - Xcode
 - Swift 6.0+
+
+## References
+
+### Functional Core, Imperative Shell
+
+- Gary Bernhardt — [Boundaries](https://www.destroyallsoftware.com/talks/boundaries) (2012) — originated the concept
+- Scott Wlaschin — [Moving IO to the edges of your app: Functional Core, Imperative Shell](https://www.youtube.com/watch?v=P1vES9AgfC4)
+- Scott Wlaschin — [Functional Design Patterns](https://www.youtube.com/watch?v=srQt1NAHYC0) (NDC London 2014)
+- Scott Wlaschin — "Domain Modeling Made Functional" (book)
+
+### SwiftUI Data Flow
+
+- WWDC 2019 — [Data Flow Through SwiftUI](https://developer.apple.com/videos/play/wwdc2019/226/)
+- objc.io — [Thinking in SwiftUI](https://www.objc.io/books/thinking-in-swiftui/) (book)
+- Point-Free — [pointfree.co](https://www.pointfree.co) — deep dives on SwiftUI architecture and testing
+
+### Snapshot Testing
+
+- Point-Free — [swift-snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing)
+
+### TDD
+
+- Kent Beck — "Test Driven Development: By Example" (book)
