@@ -1,3 +1,4 @@
+[![Run UI Tests](https://github.com/sisoje/swiftui-testing/actions/workflows/test.yml/badge.svg)](https://github.com/sisoje/swiftui-testing/actions/workflows/test.yml)
 # SwiftUI Functional Core Tests
 
 > Snapshot testing, but for actions.
