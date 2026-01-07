@@ -1,7 +1,7 @@
 [![Run UI Tests](https://github.com/sisoje/swiftui-testing/actions/workflows/test.yml/badge.svg)](https://github.com/sisoje/swiftui-testing/actions/workflows/test.yml)
 # SwiftUI Functional Core Tests
 
-> Snapshot testing, but for actions.
+> Snapshot testing, but for actions. By strict TDD definitions, this is a unit test — but it runs through UI testing to activate the SwiftUI runtime.
 
 A starter template for SwiftUI functional core testing. Clone it, drop it into your project, and customize it to test your views. Tests define views as codable structs, actions are captured as text snapshots, and tests verify the snapshots match saved ones.
 
